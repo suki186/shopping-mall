@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import ProductDetail from './pages/ProductDetail';
 import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
+import Navbar from './components/Navbar';
 
 //1. 전체상품, 로그인, 상품상세 페이지
 //2. 전체상품 보여주기
@@ -17,6 +18,9 @@ import LoginPage from './pages/LoginPage';
 function App() {
   return (
     <div>
+
+      <Navbar />
+      
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/login' element={<LoginPage />} />
