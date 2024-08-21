@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-top: 25px;
+
+    cursor: pointer;
 }
 
 .login-button {
@@ -24,11 +25,16 @@
     
 }
 
+.logo-img img {
+    cursor: pointer;
+}
+
 .menu-area {
     display: flex;
     justify-content: center;
 
     margin: 0 50px;
+    margin-bottom: 20px;
 
 }
 

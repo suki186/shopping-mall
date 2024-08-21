@@ -1,10 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-regular-svg-icons'
+//import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { faUser as faUserSolid } from '@fortawesome/free-solid-svg-icons';
+import { faUser as faUserRegular } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({authenticate}) => {
 
     const menuList= ['NEW', 'ANIMALS', 'AMUSEABLES', 'BAGS & CHARMS', 'COLLECTIONS'];
 
@@ -19,10 +21,11 @@ const Navbar = () => {
     }
 
     return (
-        <div>
+        <div className='navber'>
             <div className='top-bar'>
-                <div className='login-button'>
-                    <FontAwesomeIcon icon={faUser} onClick={goToLoginpage}/>
+                <div className='login-button' onClick={goToLoginpage}>
+                    {/* <FontAwesomeIcon icon={faUser} /> */}
+                    <FontAwesomeIcon icon={authenticate ? faUserSolid : faUserRegular} />
                 </div>  
             </div>
 
