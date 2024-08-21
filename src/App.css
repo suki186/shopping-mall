@@ -58,7 +58,7 @@
     right: 10px;
     margin-right: 30px;
 
-    height: 10px;
+    height: 25px;
     width: 150px;
     background-color: white;
     border-radius: 40px;
@@ -81,3 +81,42 @@
 .search-btn {
     color: rgb(125, 209, 225);
 }
+
+/* .product-card :hover {
+    transform: scale(1.5);
+}
+
+.product-img {
+    width: 350px;
+    height: 350px;
+} */
+
+.product-card {
+    position: relative;
+    overflow: visible;
+    transition: transform 0.3s ease; /* 확대 효과의 애니메이션 */
+    margin: 15px;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .product-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .product-card div {
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover div {
+    transform: scale(1.1);
+  }

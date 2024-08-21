@@ -1,13 +1,13 @@
 import React from 'react'
 
-const ProductCard = () => {
+const ProductCard = ({item}) => {
   return (
-    <div>
-        <img src='https://cdn11.bigcommerce.com/s-fz2bnmwg7y/images/stencil/320w/products/3939/109803/BAS3SOR__64676.1.jpg' />
-        <div>제목</div>
-        <div>가격</div>
-        <div>신제품</div>
-
+    <div className='product-card'>
+        <img className='product-img' src={item?.img} />
+        <div>{item?.choice==true?"Best Seller":""}</div>
+        <div>{item?.title}</div>
+        <div>€{item?.price}</div>
+        <div>{item?.new==true?"신제품":""}</div>
     </div>
   )
 }

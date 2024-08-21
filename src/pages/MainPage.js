@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const MainPage = () => {
 
@@ -21,7 +22,17 @@ const MainPage = () => {
 
   return (
     <div>
-        <ProductCard />
+      {/* 가운데 정렬 */}
+      <Container>
+        <Row>
+          {productList.map((menu) => (
+            <Col lg={3}>
+              <ProductCard item={menu}/>
+            </Col>
+            
+          ))}
+        </Row>
+      </Container>
     </div>
   )
 }
