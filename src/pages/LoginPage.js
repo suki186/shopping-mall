@@ -19,14 +19,15 @@ const LoginPage = ({setAuthenticate}) => {
   return (
     <Container>
       {/* Form: 입력받은 정보를 백엔드로 보내고 싶을 때 씀 (자동 새로고침 됨)*/}
-      <Form onSubmit={(event) => loginUser(event)}>
+      <Form onSubmit={(event) => loginUser(event)} className='login-form'>
+        <h2 className='login-h2'>LOGIN</h2>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          
+          <Form.Control type="email" placeholder="Enter email" className='login-input'/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
 
@@ -35,7 +36,7 @@ const LoginPage = ({setAuthenticate}) => {
         </Form.Group>
 
         {/* Form-Button-submit이면 onClick 대신 onSubmit */}
-        <Button variant="outline-danger" type='submit'>
+        <Button variant="outline-danger" type='submit' className='login-btn'>
           Login
         </Button>
       </Form>

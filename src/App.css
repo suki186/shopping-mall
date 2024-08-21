@@ -88,14 +88,22 @@
     color: rgb(125, 209, 225);
 }
 
-/* .product-card :hover {
-    transform: scale(1.5);
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 30px;
 }
 
-.product-img {
-    width: 350px;
-    height: 350px;
-} */
+.login-h2 {
+    margin: 30px;
+}
+
+.mb-3 {
+    width: 300px;
+}
 
 .product-card {
     position: relative;
@@ -126,3 +134,4 @@
   .product-card:hover div {
     transform: scale(1.1);
   }
+
