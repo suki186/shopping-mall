@@ -7,14 +7,13 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
 
-    const menuList= ['NEW', 'ANIMALS', 'AMUSEABLES', 'BAGS & CHARMS', 'BOOKS', 'PERSONALISED', 'COLLECTIONS'];
+    const menuList= ['NEW', 'ANIMALS', 'AMUSEABLES', 'BAGS & CHARMS', 'COLLECTIONS'];
 
   return (
     <div>
-        <div>
+        <div className='top-bar'>
             <div className='login-button'>
                 <FontAwesomeIcon icon={faUser} />
-                <div>Login</div>
             </div>  
         </div>
 
@@ -24,16 +23,18 @@ const Navbar = () => {
 
         <div className='menu-area'>
 
+            <div className='search-box'>
+                <FontAwesomeIcon icon={faSearch} className='search-btn'/>
+                <input type='text' className='search-input' placeholder='S e a r c h . .'/>
+            </div>
+
             <ul className='menu-list'>
                 {menuList.map((menu) => (
                     <li>{menu}</li>
                 ))}
             </ul>
 
-            <div className='search-input'>
-                <FontAwesomeIcon icon={faSearch} />
-                <input type='text' />
-            </div>
+            
         </div>
     </div>
   )
