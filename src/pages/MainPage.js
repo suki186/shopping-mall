@@ -8,7 +8,7 @@ const MainPage = () => {
   const [productList, setProductList] = useState([]);
 
   const getProducts = async() => {
-    const response = await fetch('http://localhost:5000/products');
+    const response = await fetch('https://my-json-server.typicode.com/suki186/shopping-mall/products');
     const data = await response.json();
     console.log(data);
 

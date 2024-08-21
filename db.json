@@ -155,6 +155,24 @@
           "choice":false,
           "new":true,
           "size":["S","M","L"]
-      }
+      },
+      {
+          "id":16,
+          "img":"https://cdn11.bigcommerce.com/s-fz2bnmwg7y/images/stencil/960w/products/3222/107827/L4PGB__82389.1712532253.jpg?c=1",
+          "title":"Little Pig Bag",
+          "price":"40.00",
+          "choice":true,
+          "new":false,
+          "size":["S","M","L"]
+      },
+      {
+          "id":17,
+          "img":"https://cdn11.bigcommerce.com/s-fz2bnmwg7y/images/stencil/320w/products/2577/106629/A4HB__47522.1712643327.jpg?c=1",
+          "title":"Heart Bag",
+          "price":"35.00",
+          "choice":false,
+          "new":false,
+          "size":["S","M","L"]
+      }      
   ]
 }
