@@ -2,6 +2,10 @@ import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const LoginPage = ({setAuthenticate}) => {
 
@@ -21,19 +25,19 @@ const LoginPage = ({setAuthenticate}) => {
       {/* Form: 입력받은 정보를 백엔드로 보내고 싶을 때 씀 (자동 새로고침 됨)*/}
       <Form onSubmit={(event) => loginUser(event)} className='login-form'>
         <h2 className='login-h2'>LOGIN</h2>
+        <Form.Text className='login-msg'>For joy delivered to your inbox</Form.Text>
+
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          
+          <FontAwesomeIcon icon={faEnvelope}/>
           <Form.Control type="email" placeholder="Enter email" className='login-input'/>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          
-          <Form.Control type="password" placeholder="Password" />
+          <FontAwesomeIcon icon={faLock}/>
+          <Form.Control type="password" placeholder="Password" className='login-input'/>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+        
 
         {/* Form-Button-submit이면 onClick 대신 onSubmit */}
         <Button variant="outline-danger" type='submit' className='login-btn'>

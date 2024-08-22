@@ -8,15 +8,19 @@
 }
 
 .login-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
     position: absolute;
     right: 10px;
 
     margin: 20px;
+}
 
+.bag-button {
     
+    position: absolute;
+    right: 45px;
+
+    margin: 20px;
 }
 
 .logo-img {
@@ -98,11 +102,35 @@
 }
 
 .login-h2 {
+    
+    margin-top: 30px;
+}
+
+.login-msg {
+    margin-bottom: 30px;
+}
+
+.login-btn {
     margin: 30px;
 }
 
 .mb-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 300px;
+}
+
+.form-control.login-input {
+    border: none;
+    border-bottom: 2px solid rgb(199, 197, 197);
+    
+    &:focus {
+        border: none;
+        border-bottom: 2px solid red;
+        outline: none;
+        box-shadow: none; 
+    }
 }
 
 .product-card {
