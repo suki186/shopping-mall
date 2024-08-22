@@ -41,7 +41,7 @@ const LoginPage = ({setAuthenticate}) => {
         </Button>
       </Form>
     </Container>
-  )
+  );
 }
 
 export default LoginPage

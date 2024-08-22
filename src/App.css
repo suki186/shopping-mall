@@ -110,28 +110,85 @@
     overflow: visible;
     transition: transform 0.3s ease; /* 확대 효과의 애니메이션 */
     margin: 15px;
-  }
+}
   
-  .product-card:hover {
+.product-card:hover {
     transform: scale(1.1);
-  }
+}
   
-  .product-card img {
+.product-card img {
     display: block;
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
-  }
+}
   
-  .product-card:hover img {
+.product-card:hover img {
     transform: scale(1.1);
-  }
+}
   
-  .product-card div {
+.product-card div {
     transition: transform 0.3s ease;
-  }
+}
   
-  .product-card:hover div {
+.product-card:hover div {
     transform: scale(1.1);
-  }
+}
 
+.product-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product-img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-img img {
+    width: 500px;
+    height: 500px;
+}
+
+.product-rating img {
+    max-width: 100px;
+    max-height: auto;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.product-price {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.product-size {
+    display: flex;
+    justify-content: center;
+    align-items: cente
+    
+}
+
+.size-btn {
+    margin: 10px;
+    
+}
+
+.size-btn Button {
+    width: 40px;
+    height: 40px;
+    border-radius: 0%;
+}
+
+.bag-btn Button {
+    margin-top: 20px;
+    width: 65%;
+    border-radius: 0%;
+    color: white;
+
+}
