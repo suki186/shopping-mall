@@ -2,11 +2,12 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import ProductDetail from './pages/ProductDetail';
+//import ProductDetail from './pages/ProductDetail';
 import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
 import Navbar from './components/Navbar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import PrivateRoute from './route/PrivateRoute';
 
 //1. 전체상품, 로그인, 상품상세 페이지
 //2. 전체상품 보여주기
@@ -22,15 +23,19 @@ function App() {
 
   const [authenticate, setAuthenticate] = useState(false); // true면 로그인 됨
 
+  useEffect(()=> {
+    console.log("login status: ", authenticate);
+  }, [authenticate]);
+
   return (
     <div>
 
-      <Navbar authenticate={authenticate}/>
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       
       <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/login' element={<LoginPage setAuthenticate={setAuthenticate}/>} />
-        <Route path='/product/:id' element={<ProductDetail />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/login" element={<LoginPage setAuthenticate={setAuthenticate}/>} />
+        <Route path="/product/:id" element={<PrivateRoute authenticate={authenticate} />} />
 
       </Routes>
     </div>

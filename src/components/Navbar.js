@@ -6,14 +6,15 @@ import { faUser as faUserRegular } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
 
-const Navbar = ({authenticate}) => {
+const Navbar = ({authenticate, setAuthenticate}) => {
 
     const menuList= ['NEW', 'ANIMALS', 'AMUSEABLES', 'BAGS & CHARMS', 'COLLECTIONS'];
 
     const navigate = useNavigate();
 
     const goToLoginpage =()=> {
-        navigate("/login");
+        authenticate === false ? navigate("/login") : navigate("/");
+        setAuthenticate(false);
     }
 
     const goToHomepage =()=> {
@@ -25,7 +26,7 @@ const Navbar = ({authenticate}) => {
             <div className='top-bar'>
                 <div className='login-button' onClick={goToLoginpage}>
                     {/* <FontAwesomeIcon icon={faUser} /> */}
-                    <FontAwesomeIcon icon={authenticate ? faUserSolid : faUserRegular} />
+                    <FontAwesomeIcon icon={authenticate == true ? faUserSolid : faUserRegular} />
                 </div>  
             </div>
 
