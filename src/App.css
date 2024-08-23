@@ -275,7 +275,7 @@
 .slide-text {
     position: absolute;
     bottom: 25%;
-    left: 35%;
+    left: 30%;
     transform: translateX(-50%);
     color: white;
     padding: 10px;
@@ -284,12 +284,12 @@
 
 .slide-text h2 {
     font-weight: 700;
-    font-size:2.5em;
-    max-width: 80%;
+    font-size:3.0em;
+    width: 100%;
 }
 
 /* 반응형 */
-@media screen and (max-width: 63rem) {
+@media screen and (max-width: 480px) {
     .hide {
       visibility:visible;
     }
@@ -305,5 +305,11 @@
     }
     .product-best {
         background-color: rgb(255, 220, 212);
+    }
+
+    .slide-text h2 {
+        font-weight: 700;
+        font-size:1.0em;
+        width: 100%;
     }
 }
