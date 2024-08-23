@@ -34,6 +34,7 @@
 .logo-img {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
     
 }
 
@@ -106,7 +107,7 @@
     margin-left: 170px;
 }
 
-.hide{
+.hide {
     visibility:hidden
 }
 
@@ -368,5 +369,26 @@
     }
     .product-bestnew div {
         margin: 0px 3px;
+    }
+
+    .logo-img img {
+        width: 150px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .product-img img {
+        width: 350px;
+        height: 350px;
+        margin-left: 30px;
+    }
+
+    .product-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        margin-left: 30px;
+
     }
 }
