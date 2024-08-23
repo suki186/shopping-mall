@@ -12,11 +12,15 @@ const ProductCard = ({item}) => {
 
   return (
     <div className='product-card' onClick={showDetail}>
-        <img className='product-img' src={item?.img} />
-        <div>{item?.choice==true?"Best Seller":""}</div>
-        <div>{item?.title}</div>
-        <div>€ {item?.price}</div>
-        <div>{item?.new==true?"NEW":""}</div>
+      <div className='product-bestnew'>
+        {item?.new && <div className="product-new">⭐️New </div>}
+        {item?.choice && <div className="product-best">👍Best</div>}
+        {item?.new == false && item?.choice == false && <div className="product-not">Noting</div>}
+      </div>
+      <img className='product-img' src={item?.img} />
+      <div>{item?.title}</div>
+      <div>€ {item?.price}</div>
+        
     </div>
   );
 }
