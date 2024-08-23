@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Navbar = ({authenticate, setAuthenticate}) => {
 
-    const menuList= ['NEW', 'ANIMALS', 'AMUSEABLES', 'BAGS & CHARMS', 'COLLECTIONS'];
+    const menuList= ['NEW', 'ANIMALS', 'AMUSEABLES', 'BAGS & CHARMS', 'ALL PRODUCTS'];
 
     const navigate = useNavigate();
 
@@ -18,6 +18,17 @@ const Navbar = ({authenticate, setAuthenticate}) => {
 
     const goToHomepage =()=> {
         navigate("/");
+    }
+
+    const search =(event)=> {
+        if (event.key == "Enter") {
+            console.log("Search key");
+
+            // 입력한 검색어를 읽어와 url 바꾸기
+            const keyword = event.target.value;
+            navigate(`/?q=${keyword}`);
+        }
+
     }
 
     return (
@@ -40,7 +51,7 @@ const Navbar = ({authenticate, setAuthenticate}) => {
 
                 <div className='search-box'>
                     <FontAwesomeIcon icon={faSearch} className='search-btn'/>
-                    <input type='text' className='search-input' placeholder='Search..'/>
+                    <input type='text' className='search-input' placeholder='Search..' onKeyPress={(event)=>search(event)} />
                 </div>
 
                 <ul className='menu-list'>

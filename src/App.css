@@ -33,6 +33,10 @@
     cursor: pointer;
 }
 
+.menu-list {
+    cursor: pointer;
+}
+
 .menu-area {
     display: flex;
     justify-content: center;
