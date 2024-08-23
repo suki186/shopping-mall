@@ -1,9 +1,11 @@
 import React from 'react'
 import ProductCard from '../components/ProductCard';
+import Footer from '../components/Footer';
 import '../css/MainPage.css';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -89,6 +91,8 @@ const MainPage = () => {
           ))}
         </Row>
       </Container>
+
+      <Footer />
     </div>
   )
 }
