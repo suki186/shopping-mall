@@ -288,12 +288,6 @@
     max-width: 80%;
 }
 
-.slide-text div {
-    font-weight: 700;
-    font-size:20px;
-    max-width: 80%;
-}
-
 /* 반응형 */
 @media screen and (max-width: 63rem) {
     .hide {
@@ -304,5 +298,12 @@
     }
     .search-box{
       display: none;
+    }
+
+    .product-new {
+        background-color: rgb(204, 246, 201);
+    }
+    .product-best {
+        background-color: rgb(255, 220, 212);
     }
 }

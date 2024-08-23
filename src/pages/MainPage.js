@@ -67,7 +67,6 @@ const MainPage = () => {
 
                 <div className="slide-text">
                   <h2>{land.text}</h2>
-                  <div>{land.subText}</div>
                 </div>
               </div>
             ))}
