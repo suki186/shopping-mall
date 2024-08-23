@@ -1,0 +1,171 @@
+body {
+    font-family: 'Cafe24 Decobox', sans-serif;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+
+    cursor: pointer;
+}
+
+.login-button {
+    position: absolute;
+    right: 10px;
+    margin: 20px;
+}
+
+.bag-button {
+    position: absolute;
+    right: 45px;
+    margin: 20px;
+}
+
+.burger-menu {
+    position: absolute;
+    left: 10px;
+    margin: 20px;
+}
+
+.logo-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  
+}
+
+.logo-img img {
+    cursor: pointer;
+}
+
+.menu-area {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 50px;
+    margin-bottom: 20px;
+}
+
+.menu-list {
+    /* Ensure proper spacing */
+    margin: 0 10px; /* Adjust as needed */
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    /* flex-wrap: wrap; */
+}
+
+.menu-list li {
+    margin: 9px;
+    border-bottom: 3px solid rgb(199, 197, 197);
+    cursor: pointer;
+
+    &:hover {
+        border: none;
+        border-bottom: 3px solid rgb(125, 209, 225);
+    }
+}
+
+.side-menu {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(125, 209, 225, 0.7);
+
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index:2
+}
+
+.side-menu-list li {
+    list-style-type: none;
+    margin-top: 20px;
+    margin-left: 30px;
+    border: none;
+    width: 120px;
+    cursor: pointer;
+
+    &:hover {
+        border: none;
+        border-bottom: 3px solid rgb(62, 157, 159);
+    }
+}
+
+.exit-btn {
+    margin-left: 170px;
+}
+
+.hide {
+    visibility:hidden
+}
+
+
+.search-box, .search-box2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    margin-right: 30px;
+
+    height: 25px;
+    width: 150px;
+    background-color: white;
+    border-radius: 40px;
+    padding: 8px;
+    border: 1px solid rgb(125, 209, 225);
+    margin: 10px;
+}
+
+.search-box2 {
+    margin-top: 50px;
+}
+
+.search-input {
+    border: none;
+    width: 115px;
+    background: none;
+    outline: none;
+    padding: 0px;
+    /* color: rgb(147, 221, 235); */
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.search-btn {
+    color: rgb(125, 209, 225);
+}
+
+/* 반응형 */
+@media screen and (max-width: 63rem) {
+    .hide {
+      visibility:visible;
+    }
+    .menu-list {
+      display: none;
+    }
+    .search-box{
+      display: none;
+    }
+
+    .slide-text h2 {
+        font-weight: 700;
+        font-size:1.0em;
+        width: 100%;
+    }
+
+    .logo-img img {
+        width: 150px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+}

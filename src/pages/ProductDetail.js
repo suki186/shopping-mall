@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import '../css/ProductDetail.css'
 import { Container, Row, Col } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import rating from '../media/rating.png'

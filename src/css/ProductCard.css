@@ -1,0 +1,75 @@
+body {
+    font-family: 'Cafe24 Decobox', sans-serif;
+}
+
+.product-card {
+    position: relative;
+    overflow: visible;
+    transition: transform 0.3s ease; /* 확대 효과의 애니메이션 */
+    margin: 15px;
+}
+  
+.product-card:hover {
+    transform: scale(1.1);
+}
+  
+.product-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+  
+.product-card div {
+    transition: transform 0.3s ease;
+}
+  
+.product-card:hover div {
+    transform: scale(1.1);
+}
+
+.product-bestnew {
+    display: flex;
+    justify-content: center;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    font-size: 12px;
+}
+.product-bestnew div {
+    margin: 0px 5px;
+}
+
+.product-new {
+    padding-right: 5px;
+    background-color: rgb(204, 246, 201);
+}
+.product-best {
+    padding-right: 5px;
+    background-color: rgb(255, 220, 212);
+}
+
+.product-not {
+     opacity: 0; /* 글자 투명하게 */
+}
+
+
+/* 반응형 */
+@media screen and (max-width: 63rem) {
+
+    .product-bestnew {
+        display: flex;
+        justify-content: center;
+    
+        margin-left: 10px;
+        margin-right: 10px;
+    
+        font-size: 9px;
+        font-weight: 700;
+    }
+    .product-bestnew div {
+        margin: 0px 3px;
+    }
+
+}

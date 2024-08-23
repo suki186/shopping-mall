@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../css/Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser as faUserSolid } from '@fortawesome/free-solid-svg-icons';
 import { faUser as faUserRegular } from '@fortawesome/free-regular-svg-icons';
@@ -40,7 +41,7 @@ const Navbar = ({authenticate, setAuthenticate}) => {
             <div className="side-menu" style={{ width: width }}>
                 <FontAwesomeIcon className="exit-btn" icon={faX} onClick={() => setWidth(0)} />
 
-                <div className="side-menu-list" id="menu-list">
+                <div className="side-menu-list">
                     {menuList.map((menu, index) => (
                         <li key={index}>{menu}</li>
                     ))}
