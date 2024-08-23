@@ -168,6 +168,7 @@
 .product-bestnew {
     display: flex;
     justify-content: center;
+
     margin-left: 20px;
     margin-right: 20px;
 
@@ -175,7 +176,7 @@
     font-weight: 700;
 }
 .product-bestnew div {
-    margin: 0px 10px;
+    margin: 0px 3px;
 }
 
 .product-new {
@@ -298,13 +299,6 @@
     }
     .search-box{
       display: none;
-    }
-
-    .product-new {
-        background-color: rgb(204, 246, 201);
-    }
-    .product-best {
-        background-color: rgb(255, 220, 212);
     }
 
     .slide-text h2 {
