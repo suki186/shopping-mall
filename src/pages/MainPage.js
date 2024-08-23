@@ -76,7 +76,7 @@ const MainPage = () => {
 
         <Row>
           {productList.map((menu) => (
-            <Col sm={6} md={4} lg={3}>
+            <Col xs={6} md={4} lg={3}>
               <ProductCard item={menu}/>
             </Col>
             
