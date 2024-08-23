@@ -11,12 +11,16 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   const getProductDetail = async() => {
-    
-    const response = await fetch(`https://my-json-server.typicode.com/suki186/shopping-mall/products/${id}`);
-    const data = await response.json();
-    console.log(data);
 
-    setProduct(data);
+    try {
+      const response = await fetch(`https://my-json-server.typicode.com/suki186/shopping-mall/products/${id}`);
+      const data = await response.json();
+      console.log(data);
+
+      setProduct(data);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   useEffect(()=> {

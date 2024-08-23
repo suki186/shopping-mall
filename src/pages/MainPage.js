@@ -39,14 +39,20 @@ const MainPage = () => {
 
   const getProducts = async() => {
 
-    const searchQuery = query.get('q') || ""; //쿼리가 없다면 빈문자열
-    console.log("쿼리값: ", searchQuery);
+    try {
+      const searchQuery = query.get('q') || ""; //쿼리가 없다면 빈문자열
+      console.log("쿼리값: ", searchQuery);
 
-    const response = await fetch(`https://my-json-server.typicode.com/suki186/shopping-mall/products?q=${searchQuery}`);
-    const data = await response.json();
-    console.log(data);
+      const response = await fetch(`https://my-json-server.typicode.com/suki186/shopping-mall/products?q=${searchQuery}`);
+      const data = await response.json();
+      console.log(data);
 
-    setProductList(data);
+      setProductList(data);
+
+    } catch (e) {
+      console.log(e);
+    }
+
   };
 
   // []에 암것도 안넣으면 프로젝트 시작 후 딱 한번만 실행
