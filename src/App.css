@@ -23,6 +23,14 @@
     margin: 20px;
 }
 
+.burger-menu {
+    
+    position: absolute;
+    left: 10px;
+
+    margin: 20px;
+}
+
 .logo-img {
     display: flex;
     justify-content: center;
@@ -42,7 +50,7 @@
 
 }
 
-.search-box, .menu-list {
+.menu-list {
     /* Ensure proper spacing */
     margin: 0 10px; /* Adjust as needed */
 }
@@ -58,6 +66,7 @@
     margin: 9px;
     border-bottom: 3px solid rgb(199, 197, 197);
     cursor: pointer;
+    font-weight: 700;
 
     &:hover {
         border: none;
@@ -65,8 +74,44 @@
     }
 }
 
+.side-menu {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(125, 209, 225, 0.5);
+    font-weight: 700;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index:2
+}
+.side-menu-list li {
+    list-style-type: none;
+    margin-top: 20px;
+    margin-left: 30px;
+    border: none;
+    width: 120px;
+    cursor: pointer;
 
-.search-box {
+    &:hover {
+        border: none;
+        border-bottom: 3px solid rgb(62, 157, 159);
+    }
+}
+
+.exit-btn {
+    margin-left: 170px;
+}
+
+.hide{
+    visibility:hidden
+}
+
+
+.search-box, .search-box2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,6 +126,10 @@
     padding: 8px;
     border: 1px solid rgb(125, 209, 225);
     margin: 10px;
+}
+
+.search-box2 {
+    margin-top: 50px;
 }
 
 .search-input {
@@ -176,7 +225,7 @@
     font-weight: 700;
 }
 .product-bestnew div {
-    margin: 0px 3px;
+    margin: 0px 5px;
 }
 
 .product-new {
@@ -290,7 +339,7 @@
 }
 
 /* 반응형 */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 63rem) {
     .hide {
       visibility:visible;
     }
@@ -305,5 +354,19 @@
         font-weight: 700;
         font-size:1.0em;
         width: 100%;
+    }
+
+    .product-bestnew {
+        display: flex;
+        justify-content: center;
+    
+        margin-left: 10px;
+        margin-right: 10px;
+    
+        font-size: 9px;
+        font-weight: 700;
+    }
+    .product-bestnew div {
+        margin: 0px 3px;
     }
 }
